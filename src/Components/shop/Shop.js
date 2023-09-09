@@ -88,7 +88,7 @@ function Shop() {
     const [categories, setCategories] = useState([])
     const [products, setProducts] = useState(Shopped_products)
     const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 12;
+    const itemsPerPage = 2;
     // Calculate the total number of pages based on itemsPerPage and data length
     const totalPages = Math.ceil(products.length / itemsPerPage);
     // Calculate the range of items to display for the current page
@@ -133,11 +133,14 @@ function Shop() {
         setProducts(Shopped_products)
     }
     useEffect(() => {
-        setProducts(products.filter((item) => {
+        setProducts((prevProducts) => {
+          const updatedProducts = prevProducts.filter((item) => {
             return !categories.length || categories.some((category) => item.type.toLowerCase().includes(category));
-        }))
-        setCurrentPage(1)
-    }, [categories,products]);
+          });
+          return updatedProducts;
+        });
+        setCurrentPage(1);
+      }, [categories]);
 
     return (
         <>
