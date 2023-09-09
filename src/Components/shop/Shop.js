@@ -88,7 +88,7 @@ function Shop() {
     const [categories, setCategories] = useState([])
     const [products, setProducts] = useState(Shopped_products)
     const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 2;
+    const itemsPerPage = 12;
     // Calculate the total number of pages based on itemsPerPage and data length
     const totalPages = Math.ceil(products.length / itemsPerPage);
     // Calculate the range of items to display for the current page
