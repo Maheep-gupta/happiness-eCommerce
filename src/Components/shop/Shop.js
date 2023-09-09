@@ -137,7 +137,7 @@ function Shop() {
             return !categories.length || categories.some((category) => item.type.toLowerCase().includes(category));
         }))
         setCurrentPage(1)
-    }, [categories]);
+    }, [categories,products]);
 
     return (
         <>

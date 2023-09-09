@@ -3,7 +3,6 @@ import Navbar from '../Navbar/Navbar'
 import './home.css'
 import HomeCarousel from '../carousel/HomeCarousel'
 import { Link } from 'react-router-dom'
-import Card from '../cards/Card'
 import Footer from '../footer/Footer'
 import ProductCard from '../productcard/ProductCard'
 

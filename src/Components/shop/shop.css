@@ -95,6 +95,12 @@ option {
 .categories-options ul li input {
     display: inline-block;
 }
+.categories-options ul li input[type="checkbox"]{
+    height: unset;
+    width: unset;
+    margin: 0;
+    margin-right: 0.5rem;
+}
 
 .products-view-box {
     margin-top: 2rem;
